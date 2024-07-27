@@ -1,0 +1,111 @@
+header{
+    background-color: #F5F5F5;
+}
+
+nav{
+    background-color: #f5f5f5;
+    text-align: center;
+
+}
+a{
+    color:#666666;
+    font-size: 20px;
+
+    /*DIFERENÇA ENTRE UMA FONTE SERIFADA DE UMA FONTE NÃO SERIFADA*/
+    /*As fontes não serifadas são um pouco mais agradáveis. As fontes serifadas são aquelas fontes mais usadas em jornais de antigamente.*/
+    
+    font-family: "DM Sans", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 30px;
+    
+}
+
+#button{
+    display: inline-block;
+    background-color: #FFE4B5;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 8px #c59ca9;
+    transition: transform 100ms linear;
+}
+
+#button:hover{
+    transform:scale(1.08)   
+}
+
+
+
+.line {
+    width: 636px; /* Ocupa a largura completa disponível */
+    
+}
+
+.ola {
+    color: var(--Solid-Heading, #42446E);
+    font-family: Poppins;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px; /* 120.69% */
+    letter-spacing: -1px;
+}
+
+.myname {
+    color: var(--Solid-Heading, #42446E);
+    font-family: Poppins;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px; /* 120.69% */
+    letter-spacing: -1px;
+}
+
+.name {
+    background: var(--Gradient-Heading, linear-gradient(90deg, #ff3b79 -2.06%, #ffae00 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Poppins;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: -1px;
+    
+}
+
+.profission {
+    color: var(--Solid-Heading, #42446E);
+    font-family: Poppins;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px; /* 120.69% */
+    letter-spacing: -1px;
+    
+}
+
+.sou {
+    color: var(--Solid-Heading, #42446E);
+    font-family: Poppins;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px; /* 120.69% */
+    letter-spacing: -1px;
+}
+
+.especialidade {
+    background: var(--Gradient-Heading, linear-gradient(90deg, #ff3b79 -2.06%, #ffae00 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Poppins;
+    font-size: 65px; /* Tamanho diferente para 'Back-end Developer' */
+    font-weight: bold; /* Negrito para destaque */
+    margin-left: 5px; /* Espaço entre 'Sou' e 'Back-end Developer' */
+    
+}
