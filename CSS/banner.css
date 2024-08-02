@@ -1,0 +1,197 @@
+/*CSS ÚTIL*/
+
+.Banner{
+    box-sizing: border-box;
+     background-image: url(../Assets/images/Game.gif);
+     background-repeat: no-repeat;
+     height: 1100px;
+     padding-top: 90px;
+     padding-left: 70px;
+     background-color:var(--Rosa-claro-bckgraoud);
+          /*ITENS GERAIS*/
+    max-width: 1800px; /* Define a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 0 20px; /* Adiciona um pouco de espaçamento interno nas laterais */
+ }
+
+ /* Estilo para a margem em telas menores */
+@media (max-width: 768px) {
+    .Banner, 
+    .ola,
+    .myname,
+    .name,
+    .profission,
+    .sou,
+    .especialidade{
+        padding: 0 15px; /* Ajusta o padding para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .Banner, 
+    .ola,
+    .myname,
+    .name,
+    .profission,
+    .sou,
+    .especialidade {
+        height: 200px; /* Altura ajustada para dispositivos móveis */
+    }
+}
+ 
+ .Banner .ola{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin-bottom: 40px;
+     margin-top: 40px;
+     margin-left: 70px;
+ 
+ }
+ 
+ .Banner .myname{
+     display: flex;
+     flex-direction:column;
+     justify-content:center;
+     margin-bottom: 40px;
+     margin-top: 40px;
+     margin-left: 70px;
+ 
+ }
+ 
+ .Banner .name{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin-bottom: 40px;
+     margin-top: 40px;
+     margin-left: 70px;
+ 
+ }
+ 
+ .Banner .profission{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin-bottom: 40px;
+     margin-top: 40px;
+     margin-left: 70px;
+ 
+ }
+ 
+ .ola,
+ .myname,
+ .name,
+ .profission,
+ .sou,
+ .especialidade {
+     font-family: "Fira Code", sans-serif;
+     font-weight: 700;
+     letter-spacing: -1px;
+     height: auto;
+     width: auto;
+ }
+ 
+ .ola,
+ .myname,
+ .profission,
+ .sou {
+     
+     font-size: 58px;
+ }
+ 
+ .name,
+ .especialidade {
+     background: var(--Rosa-claro-bckgraoud)
+   
+ }
+ 
+ .Banner {
+     box-sizing: border-box;
+     background-image: url(../Assets/images/Game.gif);
+     background-repeat: no-repeat;
+     background-size: cover; /* Ajusta a imagem de fundo para cobrir o banner */
+     background-position: center; /* Centraliza a imagem de fundo */
+     height: 1000px;
+     padding-top: 90px;
+     padding-left: 70px;
+     background-color: var(--Rosa-claro-bckgraoud)
+
+ }
+ 
+ .Banner .ola,
+ .Banner .myname {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin: 10px 0 40px 70px;
+ }
+
+ /*------------------INFO STYLE-----------------------------*/
+
+ .ola,
+.myname,
+.name,
+.profission,
+.sou,
+.especialidade {
+    font-family: "Fira Code", sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+     
+}
+
+.ola,
+.myname,
+.profission,
+.sou {
+    color: var(--secondary-color);
+    font-size: 40px;
+    line-height: -20; 
+}
+
+.name,
+.especialidade {
+    background: var(--button-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    line-height: 1; /* Ajusta a altura da linha */
+}
+
+/*--------------------------INFO STYLE 2----------------------------------*/
+.Banner {
+    box-sizing: border-box;
+    background-image: url(../Assets/images/Game.gif);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajusta a imagem de fundo para cobrir o banner */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-attachment:scroll; /* Rolagem normal da imagem */
+    height: 700px;
+    width: 100%;
+    padding-top: 90px;
+    padding-left: 70px;
+    background-color:var(--Rosa-claro-bckgraoud)
+}
+
+@media (max-width: 768px) {
+    .Banner {
+        height: 300px; /* Altura ajustada para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .Banner {
+        height: 200px; /* Altura ajustada para dispositivos móveis */
+    }
+}
+
+
+.Banner .ola,
+.Banner .myname {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0 40px 70px;
+}

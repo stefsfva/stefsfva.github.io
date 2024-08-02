@@ -1,111 +1,565 @@
-header{
-    background-color: #F5F5F5;
+/*CÓDIGO CSS ORDENADO POR SEÇÕES*//*CÓDIGO CSS ORDENADO POR SEÇÕES*//*CÓDIGO CSS ORDENADO POR SEÇÕES*//*CÓDIGO CSS ORDENADO POR SEÇÕES*/
+
+/*VARIÁVEIS FIXAS DO PROJETO*/
+
+/* Variáveis de cor para fácil ajuste */
+:root {
+    --Solid-Heading: #42446E;
+    --dark-content: #666;
+    --Gradient-Heading: linear-gradient(90deg, #ff3b79 -10.06%, #ffae00 100%);
+    --background-color: #f0f0f0;
+    --highlight-color: #ff3b79;
+    --secondary-color: #f5f5f5;
+    --button-color: #FFE4B5;
+    --Azul-claro-background:#cdd9ff5b;
+    --Rosa-claro-bckgraoud:rgb(253, 234, 244);
+    --Branco: #FFFFFF;
 }
 
-nav{
-    background-color: #f5f5f5;
-    text-align: center;
 
+/*-*****---CONFIGURAÇÕES COMPARTILHADAS-----*********************CONFIGURAÇÕES COMPARTILHADAS***************-----------*/
+
+
+.header, .Banner, .capaprincipal, .sectiontwo, .sectiontree, .sectionfour, .sectionfive{
+    max-width: 1200px; /* Define a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 0 20px; /* Adiciona um pouco de espaçamento interno nas laterais */
 }
-a{
-    color:#666666;
-    font-size: 20px;
 
-    /*DIFERENÇA ENTRE UMA FONTE SERIFADA DE UMA FONTE NÃO SERIFADA*/
-    /*As fontes não serifadas são um pouco mais agradáveis. As fontes serifadas são aquelas fontes mais usadas em jornais de antigamente.*/
+
+/* Estilo para a margem em telas menores */
+@media (max-width: 768px) {
+    .header, .Banner, .capaprincipal, .sobremim, .sectiontwo, .sectiontree, .sectionfour, .sectionfive {
+        padding: 0 15px; /* Ajusta o padding para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .Banner, .capaprincipal, .sobremim, .sectiontwo, .sectiontree, .sectionfour, .sectionfive {
+        height: 200px; /* Altura ajustada para dispositivos móveis */
+    }
+}
+
+.sectiontwo,
+.sectiontree,
+.sectionfour,
+.sectionfive {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 90px 70px;
+    background-color: rgb(253, 234, 244);
+    flex-grow: 1; /* Permite que a seção cresça conforme necessário */
     
+}
+
+h2 {
+    color: var(--Solid-Heading);
+    text-align: left;
+    font-family: Poppins, sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2; /* Ajusta a altura da linha para melhor espaçamento */
+}
+
+/*CLASSE CONTAINER SENDO COMPARTILHADA PELAS SEÇÕES TREE E FOUR-*-*-*--*-*-*-*-*CLASSE CONTAINER SENDO COMPARTILHADA PELAS SEÇÕES TREE E FOUR-*-*-*-*--*-*-*-*-*--*-*-*-*-*-*-*-*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: auto;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 20px; /* Espaçamento entre figuras */
+    flex-direction: column; /* Alinha itens verticalmente */
+    align-items: stretch; /* Estica os itens para preencher a largura */
+   
+    
+}
+
+.title-h3{
+    text-align: center;
+    color: var(--Solid-Heading); /* Cor do texto */
+    font-family: "Poppins", sans-serif;
+    font-size: 12px; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 6px; /* Margem inferior */
+    font-weight: 700;
+}
+
+
+
+/*----*****-HEADER*---------------HEADER---***********----------HEADER-----**********-----------------------***/
+
+/* Estilos para o header */
+header {
+    background-color:var(--secondary-color);
+    display: flex; /* Corrigido flexbox */
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    position:fixed;
+    top: 0;
+    left: auto;
+    margin: auto;
+    margin-left: 200px;
+    width: 100%;
+    max-width: 1000px; /* Define uma largura máxima para o header */
+    z-index: 1000; /* Para garantir que o header fique acima de outros elementos */
+    
+    
+
+}
+
+header img {
+    width: 90px;
+    max-height: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Usar gap para espaçamento consistente entre itens */
+    background-color: var(--secondary-color);
+    text-align: center;
+    width: 100%;
+   
+    
+}
+
+.navegation{
+    color: var(--dark-content);
+    font-size: 20px;
     font-family: "DM Sans", Arial, Helvetica, sans-serif;
     font-weight: 500;
     text-decoration: none;
-    margin-right: 30px;
-    
+    transition: color 0.3s; /* Adiciona suavidade ao hover */
 }
 
-#button{
-    display: inline-block;
-    background-color: #FFE4B5;
-    height: 60px;
-    line-height: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-shadow: 5px 5px 8px #c59ca9;
-    transition: transform 100ms linear;
+.navegation:hover {
+    color: var(--highlight-color); /* Cor no hover */
 }
 
-#button:hover{
-    transform:scale(1.08)   
+.svgone,
+.svgtwo {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
 }
 
-
+.svgone:hover,
+.svgtwo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 .line {
-    width: 636px; /* Ocupa a largura completa disponível */
-    
+    width: 100%; /* Define a linha para ocupar a largura completa */
+    max-width: 636px; /* Tamanho máximo da linha */
 }
 
-.ola {
-    color: var(--Solid-Heading, #42446E);
-    font-family: Poppins;
-    font-size: 58px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 70px; /* 120.69% */
-    letter-spacing: -1px;
-}
 
-.myname {
-    color: var(--Solid-Heading, #42446E);
-    font-family: Poppins;
-    font-size: 58px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 70px; /* 120.69% */
-    letter-spacing: -1px;
-}
 
-.name {
-    background: var(--Gradient-Heading, linear-gradient(90deg, #ff3b79 -2.06%, #ffae00 100%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: Poppins;
-    font-size: 65px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 70px;
-    letter-spacing: -1px;
-    
-}
+/*----PARTE DO BANNER------PARTE DO BANNER----****---****PARTE DO BANNER***-*-*-*-*-*-*-*PARTE DO BANNER-**--***************/
 
-.profission {
-    color: var(--Solid-Heading, #42446E);
-    font-family: Poppins;
-    font-size: 58px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 70px; /* 120.69% */
-    letter-spacing: -1px;
-    
-}
-
-.sou {
-    color: var(--Solid-Heading, #42446E);
-    font-family: Poppins;
-    font-size: 58px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 70px; /* 120.69% */
-    letter-spacing: -1px;
-}
-
+.ola,
+.myname,
+.name,
+.profission,
+.sou,
 .especialidade {
-    background: var(--Gradient-Heading, linear-gradient(90deg, #ff3b79 -2.06%, #ffae00 100%));
+    font-family: "Fira Code", sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+     
+}
+
+.ola,
+.myname,
+.profission,
+.sou {
+    color: var(--Solid-Heading);
+    font-size: 40px;
+    line-height: -20; 
+}
+
+.name,
+.especialidade {
+    background: var(--Gradient-Heading);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: Poppins;
-    font-size: 65px; /* Tamanho diferente para 'Back-end Developer' */
-    font-weight: bold; /* Negrito para destaque */
-    margin-left: 5px; /* Espaço entre 'Sou' e 'Back-end Developer' */
+    font-size: 50px;
+    line-height: 1; /* Ajusta a altura da linha */
+}
+
+.Banner {
+    box-sizing: border-box;
+    background-image: url(../Assets/images/Game.gif);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajusta a imagem de fundo para cobrir o banner */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-attachment:scroll; /* Rolagem normal da imagem */
+    height: 700px;
+    width: 100%;
+    padding-top: 90px;
+    padding-left: 70px;
+    background-color:var(--Rosa-claro-bckgraoud)
+}
+
+@media (max-width: 768px) {
+    .Banner {
+        height: 300px; /* Altura ajustada para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .Banner {
+        height: 200px; /* Altura ajustada para dispositivos móveis */
+    }
+}
+
+
+.Banner .ola,
+.Banner .myname {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0 40px 70px;
+}
+
+
+
+/*---SECION TWO : SOBRE MIM--------*********SECION TWO : SOBRE MIM***********--------****SECION TWO : SOBRE MIM**********-------------*********/
+
+.sectiontwo {
+    background-color:var(--Rosa-claro-bckgraoud);
+    height: auto;
+    display: flex;
+    width: 100%;
+    padding: 90px 70px;
+    box-sizing: border-box;
+
+}
+
+.container-sobremim{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 100%;
+    height: auto;
+}
+
+.sobremim {
+    max-width: 1000px;
+    max-height: 2000px;
+    width: auto;
+    height: auto;
+    color:#323232;
+    font-family: "Fira Code", sans-serif;
+    font-size: 15px;
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+    border: 2px solid #f4abf1; /* Borda da caixa */
+    border-radius: 8px; /* Borda arredondada */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(236, 179, 243, 0.1); /* Sombra da caixa */
+    margin: 10px auto; /* Centralizar e adicionar margem */
+    background-color: #ffd8f4;
+}
+
+.avatar-sobremim{
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin-top: 100px;
+   
+}
+
+.botao-sobremim{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 800;
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 5px;
+    padding: 8px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px auto; /* Centraliza o botão horizontalmente */
+    cursor: pointer;
+    background-color: #7d45ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao redor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao passar o mouse */
     
+}
+
+.botao-sobremim:hover{
+    transform: translateY(-5px); /* Elevação ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+
+.sobremimritgh, .avatar-sobremimleft{
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.avatar-sobremimleft{
+    text-align: center;
+    margin-top: 8%;
+}
+
+
+
+
+/*---SECTION TREE: TECH STACKS-------******-*-*SECTION TREE: TECH STACKS-**-*-*-*--*-*-*-*-*-*-*--SECTION TREE: TECH STACKS*-*-*-**--*-*-*-*-*-*-*-*-*-*-*-**/
+
+.sectiontree{
+    background-color: #cdd9ff5b;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.tech-icon{
+    transition: transform 0.3s ease-in-out;
+    width: 80px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto; /* Ajuste o tamanho do ícone conforme necessário */
+    margin: 0 1.0cm; /* 2 cm de espaçamento total entre ícones (1.5cm de cada lado) */
+    margin-top: 5%;
+    transition: transform 0.3s; /* Transição suave para o efeito de hover */
+}
+
+
+.tech-icon, .fig-projects:hover {
+    transform: translateY(-5px) scale(1.1);
+    cursor: pointer;
+}
+
+
+.icon-row
+ {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/*SECTION FOUR: PROJECTS-*-*-*-*-*-*-*-SECTION FOUR: PROJECTS*-*-*-*-*-*-*-*-*-----SECTION FOUR: PROJECTS--------************SECTION FOUR: PROJECTS******-----------**************/
+
+.sectionfour{
+    background-color: var(--Rosa-claro-bckgraoud);
+    background-repeat: no-repeat;
+    background-size: cover; /* A imagem cobre toda a área da seção */
+    height: auto;
+    
+}
+
+.icon-row-projects, .icon-row{
+    display: flex; /* Usa flexbox para layout flexível */
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    justify-content: space-around; /* Distribui espaço uniformemente entre as figuras */
+    gap: 5px; /* Espaçamento entre as figuras */ 
+}
+
+.fig-projects, .fig-tech {
+    flex: 1 1 150px; /* Tamanho flexível: cresce e encolhe conforme necessário */
+    max-width: 150px; /* Largura máxima de cada figura */
+    height: auto;
+    width: auto;
+    border: 2px solid #f4abf1; /* Cor e espessura da borda */
+    background-color: #ffd8f4;
+    border-radius: 8px; /* Arredondamento dos cantos */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px; /* Espaçamento externo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao redor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.fig-projects{
+    height: 250px;
+}
+
+.fig-tech{
+    height: auto;
+}
+
+.fig-projects, .fig-tech:hover {
+    transform: translateY(-5px); /* Elevação ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+.project-icon{
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto; /* Ajuste o tamanho do ícone conforme necessário */
+    display: block; /* Garante que a imagem ocupe toda a largura do container */
+    margin: 0 auto 10px; /* Centraliza a imagem e adiciona margem inferior */
+    margin-top: 5%;
+    transition: transform 0.3s; /* Transição suave para o efeito de hover */
+
+}
+
+.tech-icon{
+    transition: transform 0.3s ease-in-out;
+    display: block; /* Garante que a imagem ocupe toda a largura do container */
+    margin: 0 auto 10px; /* Centraliza a imagem e adiciona margem inferior */
+    margin-top: 5%;
+    transition: transform 0.3s; /* Transição suave para o efeito de hover */
+}
+
+
+/* Botões dentro da figura */
+.fig-projects .github,
+.fig-projects .blog {
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 5px;
+    padding: 8px 15px;
+    font-size: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #020535;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.fig-projects .github {
+    background-color: #fa0352; /* Cor do botão GitHub */
+}
+
+.fig-projects .github:hover {
+    background-color: #4555ff; /* Cor do botão GitHub ao passar o mouse */
+}
+
+.fig-projects .blog {
+    background-color: #fd8700; /* Cor do botão Blog */
+}
+
+.fig-projects .blog:hover {
+    background-color: #4555ff; /* Cor do botão Blog ao passar o mouse */
+}
+
+
+
+
+.github, .blog{
+    display: inline-block;
+    margin: 5px auto; /* Centraliza o botão horizontalmente */
+    margin-left: 10px;
+    padding: 8px 16px;
+    font-size: 11px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 450;
+}
+
+.VERMAIS{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 800;
+    height: 25px;
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 5px;
+    padding: 8px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 100px auto; /* Centraliza o botão horizontalmente */
+    cursor: pointer;
+    background-color: #7d45ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao redor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao passar o mouse */
+    
+}
+
+.VERMAIS:hover{
+    transform: translateY(-5px); /* Elevação ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+
+/*BODY PARA CONFIGURAÇÕES DE CORREÇÃO FEITAS DURANTE O PROJETO-*-*-*BODY PARA CONFIGURAÇÕES DE CORREÇÃO FEITAS DURANTE O PROJETO-*-*-*-*-*--*-*-*--*-*-*-*-*--*--*-*-*-*--*-*-*/
+
+body {
+    max-width: 1200px; /* Defina um valor que se ajuste bem ao seu design */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 0 20px; /* Adiciona um espaçamento interno para evitar que o conteúdo encoste nas bordas */
+}
+    
+
+body{
+    background: #F5F5F5;
+    margin: 20;
+    padding: 20;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 1000vh;
+    overflow-x: hidden; /* Oculta o overflow horizontal */
+}
+
+/*---SECTION FIVE---------------SECTION FIVE----------------------SECTION FIVE---------------------SECTION FIVE---------------------*/
+
+.sectionfive{
+    height: auto;
+    height: 500px;
+    background-color: var(--Azul-claro-background);
+}
+
+.contact-container {
+    display: flex; /* Usa Flexbox para alinhar os itens */
+    justify-content: space-between; /* Distribui o espaço entre as figuras */
+    align-items: center; /* Alinha verticalmente os itens */
+    gap: 10px; /* Espaçamento entre as figuras */
+    flex-wrap: wrap; /* Permite que as figuras quebrem linha se necessário */
+    padding: 10px; /* Espaçamento interno do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    max-width: 1000px; /* Define uma largura máxima para o contêiner */
+    height: auto;
+}
+
+.Contatos {
+    display: flex; /* Alinha o conteúdo dentro das figuras */
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    width: 80px; /* Largura das figuras */
+    padding: 5px; /* Espaçamento interno das figuras */
+    transition: transform 0.3s ease; /* Suaviza a animação */
+    border: 1px solid #ddd; /* Adiciona uma borda ao redor da figura */
+    border-radius: 8px; /* Arredonda os cantos da figura */
+    background-color: #f9f9f9; /* Cor de fundo da figura */
+}
+
+.Contatos:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da figura ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra à figura */
+}
+
+.IconContact {
+    width: 50px; /* Largura das imagens */
+    height: 50px; /* Altura das imagens */
+    margin-bottom: 5px; /* Espaçamento entre a imagem e a legenda */
+}
+
+.legend-contact {
+    font-family: Arial, sans-serif; /* Fonte da legenda */
+    font-size: 14px; /* Tamanho da fonte da legenda */
+    color: #333; /* Cor do texto da legenda */
 }

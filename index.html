@@ -1,55 +1,295 @@
 <!DOCTYPE html>
     <html lang="pt-BR">
         <head>
-            <!--a tag meta serve para-->
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Portifolio - Stefs Alves</title>
-
-            <!--GOOGLE FONTS: DM Sans-->
+            <title>Portfólio - Stefs Alves</title>
+            
+            
+            <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-            
-            <!---GOOGLE FONTS: Poppins-->
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
             <link rel="stylesheet" href="CSS/reset.css">
             <link rel="stylesheet" href="CSS/style.css">
+            <link rel="stylesheet" href="CSS/button.css">
+            <link rel="stylesheet" href="CSS/banner.css">
+            <style>
+                /* Estilo para o cabeçalho */
+                header {
+                    display: flex; /* Flexbox para alinhar itens em linha */
+                    align-items: center; /* Centraliza verticalmente */
+                    justify-content: space-between; /* Espaço entre imagem e nav */
+                    padding: 10px 20px; /* Adiciona espaço ao redor */
+                    background-color: #f5f5f5; /* Cor de fundo */
+                }
+
+                /* Estilo para o nav */
+                nav {
+                    display: flex; /* Flexbox para os links */
+                    gap: 15px; /* Espaçamento entre links */
+                }
+
+                /* Estilo para os links */
+                nav a {
+                    text-decoration: none; /* Remove sublinhado */
+                    color: #333; /* Cor do texto */
+                    font-family: 'DM Sans', sans-serif; /* Fonte */
+                    font-size: 16px; /* Tamanho da fonte */
+                    display: flex; /* Flex para SVG e texto */
+                    align-items: center; /* Alinha verticalmente */
+                    transition: color 0.3s; /* Transição de cor */
+                }
+
+                /* Efeito hover nos links */
+                nav a:hover {
+                    color: #007BFF; /* Cor do texto no hover */
+                }
+
+                /* Estilo para os SVGs */
+                nav svg {
+                    width: 20px; /* Largura do ícone */
+                    height: 20px; /* Altura do ícone */
+                    margin-right: 8px; /* Espaço entre ícone e texto */
+                    fill: currentColor; /* Herda cor do texto */
+                }
+
+                /* Estilo para a imagem do logo */
+                header img {
+                    width: 50px; /* Tamanho da imagem do logo */
+                    height: auto; /* Mantém proporção */
+                }
+            </style>
+        </head>
+        <body>
+            <header class="capaprincipal">
+                <!-- Imagem do logo -->
+                <img src="Assets/images/avatar13.png" alt="logo">
+
+                    <nav>
+                    <!-- Links de navegação -->
+                        <a href="#1" lang="en" class="navegation">Home</a>
+                        <a href="#2" lang="en" class="navegation">About</a>
+                        <a href="#3" lang="en" class="navegation">Tech Stack</a>
+                        <a href="#4" lang="en" class="navegation">Projects</a>
+                        <a href="#5" lang="en" class="navegation">Contact</a>
+                        <a id="button" href="https://profile.indeed.com/p/stphanneferreiraa-sikk3v7" target="_blank" lang="en">Download CV</a>
+                        <a id="buttonmyblog" href="https:/tucodas.com" target="_blank" lang="en">My Blog</a>
+                        
+                    <!-- Ícone de GitHub dentro do link -->
+                        <a href="https://github.com/stefsfva" lang="en">
+                            <svg class="svgone" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.7125 0 0 6.7125 0 15C0 21.6375 4.29375 27.2437 10.2563 29.2313C11.0063 29.3625 11.2875 28.9125 11.2875 28.5188C11.2875 28.1625 11.2688 26.9813 11.2688 25.725C7.5 26.4188 6.525 24.8062 6.225 23.9625C6.05625 23.5312 5.325 22.2 4.6875 21.8438C4.1625 21.5625 3.4125 20.8687 4.66875 20.85C5.85 20.8313 6.69375 21.9375 6.975 22.3875C8.325 24.6562 10.4812 24.0187 11.3438 23.625C11.475 22.65 11.8688 21.9937 12.3 21.6187C8.9625 21.2437 5.475 19.95 5.475 14.2125C5.475 12.5813 6.05625 11.2313 7.0125 10.1813C6.8625 9.80625 6.3375 8.26875 7.1625 6.20625C7.1625 6.20625 8.41875 5.8125 11.2875 7.74375C12.4875 7.40625 13.7625 7.2375 15.0375 7.2375C16.3125 7.2375 17.5875 7.40625 18.7875 7.74375C21.6562 5.79375 22.9125 6.20625 22.9125 6.20625C23.7375 8.26875 23.2125 9.80625 23.0625 10.1813C24.0188 11.2313 24.6 12.5625 24.6 14.2125C24.6 19.9688 21.0938 21.2437 17.7563 21.6187C18.3 22.0875 18.7688 22.9875 18.7688 24.3937C18.7688 26.4 18.75 28.0125 18.75 28.5188C18.75 28.9125 19.0312 29.3813 19.7812 29.2313C22.759 28.2259 25.3465 26.3121 27.1796 23.7592C29.0127 21.2063 29.9991 18.1429 30 15C30 6.7125 23.2875 0 15 0Z" fill="#666666"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        
+                    <!-- Ícone do LinkedIn dentro do link -->
+                        <a href="https://www.linkedin.com/in/stephannealves" lang="en">
+                            <svg class="svgtwo" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <g clip-path="url(#clip0_21_37)">
+                                    <path d="M15 0.600098C7.04701 0.600098 0.600006 7.0471 0.600006 15.0001C0.600006 22.9531 7.04701 29.4001 15 29.4001C22.953 29.4001 29.4 22.9531 29.4 15.0001C29.4 7.0471 22.953 0.600098 15 0.600098ZM11.475 20.9686H8.55901V11.5846H11.475V20.9686ZM9.99901 10.4326C9.07801 10.4326 8.48251 9.7801 8.48251 8.9731C8.48251 8.1496 9.09601 7.5166 10.0365 7.5166C10.977 7.5166 11.553 8.1496 11.571 8.9731C11.571 9.7801 10.977 10.4326 9.99901 10.4326ZM22.125 20.9686H19.209V15.7681C19.209 14.5576 18.786 13.7356 17.7315 13.7356C16.926 13.7356 16.4475 14.2921 16.236 14.8276C16.158 15.0181 16.1385 15.2881 16.1385 15.5566V20.9671H13.221V14.5771C13.221 13.4056 13.1835 12.4261 13.1445 11.5831H15.678L15.8115 12.8866H15.87C16.254 12.2746 17.1945 11.3716 18.768 11.3716C20.6865 11.3716 22.125 12.6571 22.125 15.4201V20.9686Z" fill="#666666"/>
+                                </g>
+                            <defs>
+                            <clipPath id="clip0_21_37">
+                            <rect width="30" height="30" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg> 
+                        LinkedIn
+                    </a>
+                </nav>
+            </header>
+
+
+            <section id="1" class="sectioone">
+            <section class="Banner">
+
+                <div class="ola" lang="pt-BR">Olá!</div>
+                <div class="myname" lang="pt-BR">Meu nome é</div>
+                <div class="name" lang="pt-BR">Stefs Alves</div>
+                <div class="profission">
+                    <span class="sou" lang="pt-BR">Sou</span>
+                    <span class="especialidade" lang="en">BACK-END </span>
+                    <span class="especialidadetwo" lang="en">Developer</span>
+                </div>
+            </section>
+
+            </section>
+
+            <section id="2" class="sectiontwo">
+                <div class="container-sobremim">
+                    
+                    <div class="sobremimritgh">
+                        <h2 class="title -second" lang="en">About Me</h2>
+                
             
 
-        </head>
+                            <div class="sobremim" lang="pt-BR">
+                                <p class="sobremimone">Olá! Meu nome é Stéphanne, mas podem me chamar de Stéfs, se preferirem. Amo entender um pouco sobre tudo e estou sempre em busca de conhecimento. Meu maior objetivo na minha área profissional é ajudar o máximo de pessoas possível, fazendo o que me faz bem.</p>
 
-        <header>
-        <!--ANOTAÇÃO DE APRENDIZADO: A linha seguinte: A tag img serve para colocar imagens-->
-            <img src="Assets/images/avatar13.png" alt="logo">
-
-            <nav> <!--ANOTAÇÃO DE APRENDIZADO: A tag nav vem de navegação e serve para guardar os links de navegação do site.-->
-                <a href="" lang="en">Home</a>
-                <a href="" lang="en">About</a>
-                <a href="" lang="en">Tech Stack</a>
-                <a href="" lang="en">Projects</a>
-                <a href="" lang="en">Contact</a>
-                <a id="button" href="" lang="en">Download CV</a>
-            </nav> 
-        </header>
-
-        <div class="ola">Olá!</div>
-        <div class="myname">Meu nome é</div>
-        <div class="name">Stefs Alves</div>
-        <div class="profission">
-            <span class="sou">Sou</span>
-            <span class="especialidade">Back-end Developer</span>
+                                <p class="sobremimtwo"> Atualmente, estou migrando da área comercial para a área de tecnologia, mas tenho certeza de que todo o conhecimento que adquiri em minha carreira é valioso e aproveitável em qualquer novo projeto que eu assumir.</p>
+                                    
+                                <p class="sobreimtree">Posso dizer que as áreas da tecnologia que mais mexem com meu coração são Back-End e Ciência de Dados. Mas estaria mentindo se eu dissesse que não amo aprender um pouco de Front-End e Cybersecurity.</p> 
+                                    
+                                <p class="sobremimfour"> Outros conhecimentos: Tenho experiencias e conhecimento em e-commerce, SEO e Excel.</p>
+                                    
+                                <p class="sobremimfive">Trabalho bem em equipe. Tenho uma organização impecável e também sou bem focada e obcecada nas coisas que eu faço.</p>
+                </div>
         </div>
 
-        <body>
+            <div class="avatar-sobremimleft">
+                <img src="Assets/images/avatar-sobremim.png" alt="avatar-sobremim" class="avatar-sobremim">
+                <a href="#" class="botao-sobremim">SAIBA MAIS</a>
+            </div>
 
-            <link rel="stylesheet" href="CSS/reset.css">
-            <link rel="stylesheet" href="CSS/style.css">
+                </div>
+
+
+            </section>
+
+            <section id="3" class="sectiontree">
+                <h2 class="title-tree">Tech Stack</h2>
+
+                <div class="container">
             
-           
-        
+                    <div class="icon-row">
+                        <figure class="fig-tech" data-text="Conversor de Moedas - Um projeto para converter moedas de forma eficiente usando taxas de câmbio atualizadas.">
+                            <img src="Assets/images/icons8-java-128.png" alt="Java Icon" class="tech-icon">
+                            <figcaption class="title-h3">JAVA</figcaption>
+                        </figure>
+            
+                        <figure class="fig-tech" data-text="Literalura OneSix - Um projeto para explorar uma biblioteca digital com uma vasta gama de livros disponíveis.">
+                            <img src="Assets/images/icons8-spring-boot-96.png" alt="SpringBoot Icon" class="tech-icon">
+                            <figcaption class="title-h3">SBRING BOOT</figcaption>
+                        </figure>    
+            
+                        <figure class="fig-tech" data-text="ForumHub OneSix - Um fórum interativo e fácil de usar para discussões e aprendizado colaborativo.">
+                            <img src="Assets/images/icons8-mysql-96.png" alt="MySQL Icon" class="tech-icon">
+                            <figcaption class="title-h3">MySQL</figcaption>
+                        </figure>
+            
+                        <figure class="fig-tech" data-text="Portfólio Stefs Alves - Meu portfólio pessoal exibindo projetos de desenvolvimento e habilidades técnicas.">
+                            <img src="Assets/images/icons8-postgre-sql-96.png" alt="PostgreeSQL Icon" class="tech-icon">
+                            <figcaption class="title-h3">PostgreSQL</figcaption>
+                        </figure>
+
+                        <figure class="fig-tech" data-text="Portfólio Stefs Alves - Meu portfólio pessoal exibindo projetos de desenvolvimento e habilidades técnicas.">
+                            <img src="Assets/images/icons8-html-96.png" alt="Html Icon" class="tech-icon">
+                            <figcaption class="title-h3">HTML</figcaption>
+                        </figure>
+
+                        <figure class="fig-tech" data-text="Portfólio Stefs Alves - Meu portfólio pessoal exibindo projetos de desenvolvimento e habilidades técnicas.">
+                            <img src="Assets/images/icons8-css-96.png" alt="css Icon" class="tech-icon">
+                            <figcaption class="title-h3">CSS</figcaption>
+                        </figure>
+
+                        <figure class="fig-tech" data-text="Portfólio Stefs Alves - Meu portfólio pessoal exibindo projetos de desenvolvimento e habilidades técnicas.">
+                            <img src="Assets/images/icons8-javascript-96.png" alt="JavaScript Icon" class="tech-icon">
+                            <figcaption class="title-h3">JavaScript</figcaption>
+                        </figure>
+
+                        <figure class="fig-tech" data-text="Portfólio Stefs Alves - Meu portfólio pessoal exibindo projetos de desenvolvimento e habilidades técnicas.">
+                            <img src="Assets/images/icons8-oracle-128.png" alt="Oracle Infraestruture Icon" class="tech-icon">
+                            <figcaption class="title-h3">Oracle Infraestruture</figcaption>
+                        </figure>
+
+                        <figure class="fig-tech" data-text="Portfólio Stefs Alves - Meu portfólio pessoal exibindo projetos de desenvolvimento e habilidades técnicas.">
+                            <img src="Assets/images/icons8-sql-96.png" alt="SQL Icon" class="tech-icon">
+                            <figcaption class="title-h3">SQL</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            
+                
+
+            </section>
+
+            <section id="4" class="sectionfour">
+                <h2 class="title -four">Top Projects</h2>
+
+                    <div class="container">
+                        <div class="icon-row-projects">
+                            <figure class="fig-projects" data-text="Conversor de Moedas - Um projeto para converter moedas de forma eficiente usando taxas de câmbio atualizadas.">
+                                <img src="Assets/images/icon-conversordemoedas.png" alt="Project One Icon" class="project-icon">
+                                <figcaption class="title-h3">Conversor de Moedas</figcaption>
+                                <a href="https://github.com/stefsfva/conversordemoedassfva" class="github" lang="en" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <a href="https://tucodas.com" class="blog" lang="en" target="_blank" rel="noopener noreferrer">Blog</a>
+                            </figure>
+                    
+                            <figure class="fig-projects" data-text="Literalura OneSix - Um projeto para explorar uma biblioteca digital com uma vasta gama de livros disponíveis.">
+                                <img src="Assets/images/icon-literalurasix.png" alt="Project Two Icon" class="project-icon">
+                                <figcaption class="title-h3">Literalura OneSix</figcaption>
+                                <a href="https://github.com/stefsfva/literalurasix" class="github" lang="en" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <a href="https://tucodas.com" class="blog" lang="en" target="_blank" rel="noopener noreferrer">Blog</a>
+                            </figure>    
+                    
+                            <figure class="fig-projects" data-text="ForumHub OneSix - Um fórum interativo e fácil de usar para discussões e aprendizado colaborativo.">
+                                <img src="Assets/images/icon-forumhub.png" alt="Project Three Icon" class="project-icon">
+                                <figcaption class="title-h3">ForumHub OneSix</figcaption>
+                                <a href="https://github.com/stefsfva/forumone" class="github" lang="en" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <a href="https://tucodas.com" class="blog" lang="en" target="_blank" rel="noopener noreferrer">Blog</a>
+                            </figure>
+                    
+                            <figure class="fig-projects" data-text="Portfólio Stefs Alves - Meu portfólio pessoal exibindo projetos de desenvolvimento e habilidades técnicas.">
+                                <img src="Assets/images/icon-portifoliostefs.png" alt="Project Four Icon" class="project-icon">
+                                <figcaption class="title-h3">Portfólio Stefs Alves</figcaption>
+                                <a href="https://github.com/stefsfva/stefsfva.github.io" class="github" lang="en" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <a href="https://tucodas.com" class="blog" lang="en" target="_blank" rel="noopener noreferrer">Blog</a>
+                            </figure> 
+                            <a href="https://tucodas.com" class="VERMAIS" lang="pt-BR" target="_blank" rel="noopener noreferrer">VER MAIS</a>  
+                            
+                        </div>
+                    
+                    </div>
+                
+                </div>
+
+
+                
+            </section>
+
+            <section id="5" class="sectionfive">
+                <h2 class="title -five">Contact</h2>
+
+                    <div class="contact-container">
+
+                        <figure class="Contatos">
+                            <a href="https://tucodas.com" target="_blank"><img src="Assets/images/icons8-blog-64.png" class="IconContact" alt="blog Icon"></a>
+                            <figcaption class="legend-contact" lang="pt-BR"> My Blog</figcaption>
+                        </figure>
+
+                        <figure class="Contatos">
+                            <a href="https://linkedin/stefsalves" target="_blank"><img src="Assets/images/icons8-linkedin-64.png" class="IconContact" alt="LinkedIn Icon"></a>
+                            <figcaption class="legend-contact" lang="pt-BR">Linkedlin</figcaption>
+                        </figure>
+
+                        <figure class="Contatos">
+                            <a href="https://github.com/stefsfva" target="_blank"><img src="Assets/images/icons8-github-64.png" class="IconContact" alt="GiHub Icon"></a>
+                            <figcaption class="legend-contact" lang="pt-BR">GitHub</figcaption>
+                        </figure>
+
+                        <figure class="Contatos">
+                            <a href="mailto:stephanne.fva@email.com" target="_blank"><img src="Assets/images/icons8-gmail-64.png" class="IconContact" alt="Gmail Icon"></a>
+                            <figcaption class="legend-contact" lang="pt-BR">Gmail</figcaption>
+                        </figure>
+
+                        <figure class="Contatos">
+                            <a href="https://instagram.com/stefs.alves" target="_blank"><img src="Assets/images/icons8-instagram-64.png" class="IconContact" alt="Instagram Icon"></a>
+                            <figcaption class="legend-contact" lang="pt-BR">Instagram</figcaption>
+                        </figure>
+
+                        <figure class="Contatos">
+                            <a href="https://wa.me/5531999968260?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio" target="_blank"><img src="Assets/images/icons8-whatsapp-64.png" class="IconContact" alt="Whatsapp Icon"></a>
+                            <figcaption class="legend-contact" lang="pt-BR">Whatsapp</figcaption>
+                        </figure>
+                    </div>
+            
+            </section>
+            
         </body>
-        </html> 
+</html>

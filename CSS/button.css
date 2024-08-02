@@ -1,0 +1,37 @@
+/*CSS ÚTIL*/
+
+#button{
+    display: inline-block;
+    background-color: var(--button-color);
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    box-shadow: 5px 5px 8px #c59ca9;
+    transition: transform 100ms linear;
+    color: #333; /* Cor do texto para contraste */
+    font-family: "DM Sans", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#button:hover{
+    transform: scale(1.08);
+}
+
+#buttonmyblog {
+    display: inline-block;
+    background-color: #fa9bd7;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    box-shadow: 5px 5px 8px #c59ca9;
+    transition: transform 100ms linear;
+    color: #333; /* Cor do texto para contraste */
+    font-family: "DM Sans", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#buttonmyblog:hover {
+    transform: scale(1.08);
+}
